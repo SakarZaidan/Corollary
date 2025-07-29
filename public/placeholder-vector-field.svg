@@ -1,0 +1,230 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8F9FC" />
+  
+  <!-- Grid lines -->
+  <g stroke="#E2E8F0" stroke-width="1">
+    <!-- Horizontal grid lines -->
+    <line x1="100" y1="50" x2="700" y2="50" />
+    <line x1="100" y1="100" x2="700" y2="100" />
+    <line x1="100" y1="150" x2="700" y2="150" />
+    <line x1="100" y1="200" x2="700" y2="200" />
+    <line x1="100" y1="250" x2="700" y2="250" />
+    <line x1="100" y1="300" x2="700" y2="300" />
+    <line x1="100" y1="350" x2="700" y2="350" />
+    <line x1="100" y1="400" x2="700" y2="400" />
+    
+    <!-- Vertical grid lines -->
+    <line x1="100" y1="50" x2="100" y2="400" />
+    <line x1="150" y1="50" x2="150" y2="400" />
+    <line x1="200" y1="50" x2="200" y2="400" />
+    <line x1="250" y1="50" x2="250" y2="400" />
+    <line x1="300" y1="50" x2="300" y2="400" />
+    <line x1="350" y1="50" x2="350" y2="400" />
+    <line x1="400" y1="50" x2="400" y2="400" />
+    <line x1="450" y1="50" x2="450" y2="400" />
+    <line x1="500" y1="50" x2="500" y2="400" />
+    <line x1="550" y1="50" x2="550" y2="400" />
+    <line x1="600" y1="50" x2="600" y2="400" />
+    <line x1="650" y1="50" x2="650" y2="400" />
+    <line x1="700" y1="50" x2="700" y2="400" />
+  </g>
+  
+  <!-- Axes -->
+  <line x1="100" y1="225" x2="700" y2="225" stroke="#2D3748" stroke-width="2" />
+  <line x1="400" y1="50" x2="400" y2="400" stroke="#2D3748" stroke-width="2" />
+  
+  <!-- Axis labels -->
+  <text x="710" y="225" fill="#2D3748" font-family="sans-serif" font-size="14">x</text>
+  <text x="400" y="40" fill="#2D3748" font-family="sans-serif" font-size="14">y</text>
+  
+  <!-- Vector field arrows -->
+  <!-- Row 1 -->
+  <g transform="translate(150, 100)">
+    <line x1="0" y1="0" x2="20" y2="-20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,-20 15,-15 18,-25" fill="#6366F1" />
+  </g>
+  <g transform="translate(200, 100)">
+    <line x1="0" y1="0" x2="25" y2="-15" stroke="#6366F1" stroke-width="2" />
+    <polygon points="25,-15 18,-13 22,-22" fill="#6366F1" />
+  </g>
+  <g transform="translate(250, 100)">
+    <line x1="0" y1="0" x2="28" y2="-8" stroke="#6366F1" stroke-width="2" />
+    <polygon points="28,-8 21,-10 25,-16" fill="#6366F1" />
+  </g>
+  <g transform="translate(300, 100)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#6366F1" stroke-width="2" />
+    <polygon points="30,0 23,-5 23,5" fill="#6366F1" />
+  </g>
+  <g transform="translate(350, 100)">
+    <line x1="0" y1="0" x2="28" y2="8" stroke="#6366F1" stroke-width="2" />
+    <polygon points="28,8 25,16 21,10" fill="#6366F1" />
+  </g>
+  <g transform="translate(400, 100)">
+    <line x1="0" y1="0" x2="25" y2="15" stroke="#6366F1" stroke-width="2" />
+    <polygon points="25,15 22,22 18,13" fill="#6366F1" />
+  </g>
+  <g transform="translate(450, 100)">
+    <line x1="0" y1="0" x2="20" y2="20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,20 18,25 15,15" fill="#6366F1" />
+  </g>
+  
+  <!-- Row 2 -->
+  <g transform="translate(150, 150)">
+    <line x1="0" y1="0" x2="15" y2="-25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,-25 8,-22 13,-32" fill="#6366F1" />
+  </g>
+  <g transform="translate(200, 150)">
+    <line x1="0" y1="0" x2="20" y2="-20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,-20 13,-18 17,-27" fill="#6366F1" />
+  </g>
+  <g transform="translate(250, 150)">
+    <line x1="0" y1="0" x2="25" y2="-15" stroke="#6366F1" stroke-width="2" />
+    <polygon points="25,-15 18,-15 22,-22" fill="#6366F1" />
+  </g>
+  <g transform="translate(300, 150)">
+    <line x1="0" y1="0" x2="28" y2="-8" stroke="#6366F1" stroke-width="2" />
+    <polygon points="28,-8 21,-10 25,-16" fill="#6366F1" />
+  </g>
+  <g transform="translate(350, 150)">
+    <line x1="0" y1="0" x2="28" y2="8" stroke="#6366F1" stroke-width="2" />
+    <polygon points="28,8 25,16 21,10" fill="#6366F1" />
+  </g>
+  <g transform="translate(400, 150)">
+    <line x1="0" y1="0" x2="25" y2="15" stroke="#6366F1" stroke-width="2" />
+    <polygon points="25,15 22,22 18,13" fill="#6366F1" />
+  </g>
+  <g transform="translate(450, 150)">
+    <line x1="0" y1="0" x2="15" y2="25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,25 13,32 8,22" fill="#6366F1" />
+  </g>
+  
+  <!-- Row 3 -->
+  <g transform="translate(150, 200)">
+    <line x1="0" y1="0" x2="8" y2="-28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,-28 2,-24 5,-35" fill="#6366F1" />
+  </g>
+  <g transform="translate(200, 200)">
+    <line x1="0" y1="0" x2="15" y2="-25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,-25 8,-22 13,-32" fill="#6366F1" />
+  </g>
+  <g transform="translate(250, 200)">
+    <line x1="0" y1="0" x2="20" y2="-20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,-20 13,-18 17,-27" fill="#6366F1" />
+  </g>
+  <g transform="translate(300, 200)">
+    <line x1="0" y1="0" x2="25" y2="-15" stroke="#6366F1" stroke-width="2" />
+    <polygon points="25,-15 18,-15 22,-22" fill="#6366F1" />
+  </g>
+  <g transform="translate(350, 200)">
+    <line x1="0" y1="0" x2="25" y2="15" stroke="#6366F1" stroke-width="2" />
+    <polygon points="25,15 22,22 18,13" fill="#6366F1" />
+  </g>
+  <g transform="translate(400, 200)">
+    <line x1="0" y1="0" x2="20" y2="20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,20 17,27 13,18" fill="#6366F1" />
+  </g>
+  <g transform="translate(450, 200)">
+    <line x1="0" y1="0" x2="8" y2="28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,28 5,35 2,24" fill="#6366F1" />
+  </g>
+  
+  <!-- Row 4 -->
+  <g transform="translate(150, 250)">
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#6366F1" stroke-width="2" />
+    <polygon points="0,-30 -5,-23 5,-23" fill="#6366F1" />
+  </g>
+  <g transform="translate(200, 250)">
+    <line x1="0" y1="0" x2="8" y2="-28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,-28 2,-24 5,-35" fill="#6366F1" />
+  </g>
+  <g transform="translate(250, 250)">
+    <line x1="0" y1="0" x2="15" y2="-25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,-25 8,-22 13,-32" fill="#6366F1" />
+  </g>
+  <g transform="translate(300, 250)">
+    <line x1="0" y1="0" x2="20" y2="-20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,-20 13,-18 17,-27" fill="#6366F1" />
+  </g>
+  <g transform="translate(350, 250)">
+    <line x1="0" y1="0" x2="20" y2="20" stroke="#6366F1" stroke-width="2" />
+    <polygon points="20,20 17,27 13,18" fill="#6366F1" />
+  </g>
+  <g transform="translate(400, 250)">
+    <line x1="0" y1="0" x2="15" y2="25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,25 13,32 8,22" fill="#6366F1" />
+  </g>
+  <g transform="translate(450, 250)">
+    <line x1="0" y1="0" x2="0" y2="30" stroke="#6366F1" stroke-width="2" />
+    <polygon points="0,30 5,23 -5,23" fill="#6366F1" />
+  </g>
+  
+  <!-- Row 5 -->
+  <g transform="translate(150, 300)">
+    <line x1="0" y1="0" x2="-8" y2="-28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="-8,-28 -5,-35 -2,-24" fill="#6366F1" />
+  </g>
+  <g transform="translate(200, 300)">
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#6366F1" stroke-width="2" />
+    <polygon points="0,-30 -5,-23 5,-23" fill="#6366F1" />
+  </g>
+  <g transform="translate(250, 300)">
+    <line x1="0" y1="0" x2="8" y2="-28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,-28 2,-24 5,-35" fill="#6366F1" />
+  </g>
+  <g transform="translate(300, 300)">
+    <line x1="0" y1="0" x2="15" y2="-25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,-25 8,-22 13,-32" fill="#6366F1" />
+  </g>
+  <g transform="translate(350, 300)">
+    <line x1="0" y1="0" x2="15" y2="25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="15,25 13,32 8,22" fill="#6366F1" />
+  </g>
+  <g transform="translate(400, 300)">
+    <line x1="0" y1="0" x2="8" y2="28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,28 5,35 2,24" fill="#6366F1" />
+  </g>
+  <g transform="translate(450, 300)">
+    <line x1="0" y1="0" x2="-8" y2="28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="-8,28 -5,35 -2,24" fill="#6366F1" />
+  </g>
+  
+  <!-- Row 6 -->
+  <g transform="translate(150, 350)">
+    <line x1="0" y1="0" x2="-15" y2="-25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="-15,-25 -13,-32 -8,-22" fill="#6366F1" />
+  </g>
+  <g transform="translate(200, 350)">
+    <line x1="0" y1="0" x2="-8" y2="-28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="-8,-28 -5,-35 -2,-24" fill="#6366F1" />
+  </g>
+  <g transform="translate(250, 350)">
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#6366F1" stroke-width="2" />
+    <polygon points="0,-30 -5,-23 5,-23" fill="#6366F1" />
+  </g>
+  <g transform="translate(300, 350)">
+    <line x1="0" y1="0" x2="8" y2="-28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,-28 2,-24 5,-35" fill="#6366F1" />
+  </g>
+  <g transform="translate(350, 350)">
+    <line x1="0" y1="0" x2="8" y2="28" stroke="#6366F1" stroke-width="2" />
+    <polygon points="8,28 5,35 2,24" fill="#6366F1" />
+  </g>
+  <g transform="translate(400, 350)">
+    <line x1="0" y1="0" x2="0" y2="30" stroke="#6366F1" stroke-width="2" />
+    <polygon points="0,30 5,23 -5,23" fill="#6366F1" />
+  </g>
+  <g transform="translate(450, 350)">
+    <line x1="0" y1="0" x2="-15" y2="25" stroke="#6366F1" stroke-width="2" />
+    <polygon points="-15,25 -13,32 -8,22" fill="#6366F1" />
+  </g>
+  
+  <!-- Highlight circle at origin -->
+  <circle cx="400" cy="225" r="8" fill="#8B5CF6" />
+  
+  <!-- Decorative elements -->
+  <rect x="600" y="350" width="150" height="80" rx="8" fill="white" stroke="#E2E8F0" stroke-width="2" />
+  <text x="625" y="375" fill="#2D3748" font-family="sans-serif" font-size="12">Vector Field:</text>
+  <text x="625" y="395" fill="#6366F1" font-family="monospace" font-size="12">F(x,y) = (y, -x)</text>
+  <text x="625" y="415" fill="#2D3748" font-family="sans-serif" font-size="12">Rotation field</text>
+</svg>

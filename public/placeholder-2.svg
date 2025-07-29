@@ -1,0 +1,52 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="12" fill="#F3F4F6"/>
+  
+  <!-- Split View: Visualization and Code -->
+  <g transform="translate(50, 50)">
+    <!-- Visualization Panel -->
+    <rect width="340" height="500" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+    
+    <!-- 3D Visualization (simplified) -->
+    <g transform="translate(70, 100)">
+      <!-- 3D Coordinate System -->
+      <line x1="0" y1="0" x2="150" y2="0" stroke="#111827" stroke-width="2"/>
+      <line x1="0" y1="0" x2="0" y2="150" stroke="#111827" stroke-width="2"/>
+      <line x1="0" y1="0" x2="-75" y2="75" stroke="#111827" stroke-width="2"/>
+      
+      <!-- 3D Function Plot (simplified representation) -->
+      <path d="M0,0 C40,-40 80,-20 120,0" stroke="#14B8A6" stroke-width="3" fill="none"/>
+      <path d="M0,40 C40,0 80,20 120,40" stroke="#14B8A6" stroke-width="3" fill="none" opacity="0.7"/>
+      <path d="M0,80 C40,40 80,60 120,80" stroke="#14B8A6" stroke-width="3" fill="none" opacity="0.4"/>
+    </g>
+    
+    <!-- Show Code Button -->
+    <rect x="120" y="400" width="100" height="40" rx="20" fill="#8B5CF6"/>
+    <text x="130" y="425" font-family="'Inter', sans-serif" font-size="14" fill="white">Show Code</text>
+  </g>
+  
+  <!-- Code Panel -->
+  <g transform="translate(410, 50)">
+    <rect width="340" height="500" rx="8" fill="#1F2937"/>
+    
+    <!-- Code Lines (simplified representation) -->
+    <g transform="translate(20, 20)" font-family="'JetBrains Mono', monospace" font-size="14">
+      <text x="0" y="20" fill="#D1D5DB">import numpy as np</text>
+      <text x="0" y="45" fill="#D1D5DB">import matplotlib.pyplot as plt</text>
+      <text x="0" y="70" fill="#D1D5DB">from mpl_toolkits.mplot3d import Axes3D</text>
+      <text x="0" y="95" fill="#D1D5DB"></text>
+      <text x="0" y="120" fill="#14B8A6">def plot_function(a=2, b=1):</text>
+      <text x="0" y="145" fill="#D1D5DB">    fig = plt.figure(figsize=(10, 8))</text>
+      <text x="0" y="170" fill="#D1D5DB">    ax = fig.add_subplot(111, projection='3d')</text>
+      <text x="0" y="195" fill="#D1D5DB"></text>
+      <text x="0" y="220" fill="#D1D5DB">    x = np.linspace(-5, 5, 100)</text>
+      <text x="0" y="245" fill="#D1D5DB">    y = np.linspace(-5, 5, 100)</text>
+      <text x="0" y="270" fill="#D1D5DB">    X, Y = np.meshgrid(x, y)</text>
+      <text x="0" y="295" fill="#D1D5DB">    Z = a * np.sin(X) + b * np.cos(Y)</text>
+      <text x="0" y="320" fill="#D1D5DB"></text>
+      <text x="0" y="345" fill="#D1D5DB">    surf = ax.plot_surface(X, Y, Z,</text>
+      <text x="0" y="370" fill="#D1D5DB">                           cmap='viridis')</text>
+      <text x="0" y="395" fill="#D1D5DB"></text>
+      <text x="0" y="420" fill="#D1D5DB">    return fig</text>
+    </g>
+  </g>
+</svg>
