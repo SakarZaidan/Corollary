@@ -22,7 +22,7 @@
   }
 
   body {
-    @apply font-sans text-primary-dark bg-primary-light;
+    @apply font-sans text-white bg-primary-dark;
   }
 
   h1,

@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 import { Container } from "../ui/Container";
 
-const Footer = () => {
+export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -309,5 +309,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

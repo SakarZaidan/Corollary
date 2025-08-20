@@ -28,14 +28,14 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          "rounded-lg border border-neutral-light/20 bg-white p-6 shadow-sm relative",
-          gradient && "bg-gradient-to-br from-white to-secondary-light",
+          "rounded-lg border border-neutral-light/20 bg-secondary-dark p-6 shadow-sm relative",
+          gradient && "bg-gradient-to-br from-primary-dark to-secondary-dark",
           hover && "transition-all duration-300 ease-out hover:shadow-md",
           interactive &&
             "cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-md",
           glowOnHover && "group overflow-hidden",
           borderGradient &&
-            "border-transparent before:absolute before:inset-0 before:rounded-lg before:p-[1px] before:bg-gradient-to-br before:from-purple-500 before:to-teal-500 before:-z-10",
+            "border-transparent before:absolute before:inset-0 before:rounded-lg before:p-[1px] before:bg-gradient-to-br before:from-accent-purple before:to-accent-teal before:-z-10",
           elevate &&
             "transition-all duration-500 hover:shadow-xl hover:-translate-y-2",
           className
@@ -43,7 +43,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         {...props}
       >
         {glowOnHover && (
-          <div className="absolute -inset-40 opacity-0 group-hover:opacity-100 blur-3xl bg-gradient-to-br from-purple-600/20 via-transparent to-teal-600/20 transition-opacity duration-500 -z-10"></div>
+          <div className="absolute -inset-40 opacity-0 group-hover:opacity-100 blur-3xl bg-gradient-to-br from-accent-purple/30 via-transparent to-accent-teal/30 transition-opacity duration-500 -z-10"></div>
         )}
         {props.children}
       </div>
@@ -72,7 +72,7 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
     <h3
       ref={ref}
       className={cn(
-        "text-xl font-semibold leading-tight tracking-tight text-primary-dark",
+        "text-xl font-semibold leading-tight tracking-tight text-white",
         className
       )}
       {...props}
@@ -88,7 +88,7 @@ const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   CardDescriptionProps
 >(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn("text-sm text-neutral", className)} {...props} />
+  <p ref={ref} className={cn("text-sm text-neutral-light", className)} {...props} />
 ));
 CardDescription.displayName = "CardDescription";
 

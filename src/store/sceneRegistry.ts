@@ -4,19 +4,73 @@
  */
 
 import { SceneConfiguration, SceneCategory, MathConcept } from "../types/scene";
-import SimpleScene from "../components/three/SimpleScene";
+import { SimpleScene } from "../components/three/SimpleScene";
 import {
   ParametricSurface,
   FractalCube,
   SineWave,
   VectorField,
 } from "../components/three/AdvancedScenes";
+import { sceneLibrary, SceneDefinition } from "../data/sceneLibrary";
 import { FC } from "react";
+
+/**
+ * Convert scene library definitions to scene configurations
+ */
+function createSceneConfigFromDefinition(
+  sceneDef: SceneDefinition
+): SceneConfiguration {
+  // Map scene types to categories
+  const categoryMap: Record<string, SceneCategory> = {
+    Calculus: SceneCategory.ADVANCED_MATHEMATICS,
+    "Linear Algebra": SceneCategory.ADVANCED_MATHEMATICS,
+    "Differential Equations": SceneCategory.ADVANCED_MATHEMATICS,
+  };
+
+  // Map scene types to difficulty levels
+  const difficultyMap: Record<
+    SceneDefinition["type"],
+    "beginner" | "intermediate" | "advanced"
+  > = {
+    "Narrated Animation": "beginner",
+    "Exploratory Environment": "intermediate",
+    "Utility Plotter": "advanced",
+  };
+
+  return {
+    id: sceneDef.id,
+    name: sceneDef.title,
+    category:
+      categoryMap[sceneDef.category] || SceneCategory.ADVANCED_MATHEMATICS,
+    description: sceneDef.visualizationDescription,
+    component: SimpleScene as FC<any>, // Placeholder component for now
+    parameters: {
+      // Dynamic parameters based on editable variables
+      animationSpeed: {
+        min: 0.1,
+        max: 3,
+        step: 0.1,
+        default: 1,
+        label: "Animation Speed",
+        description: "Controls the speed of animations",
+      },
+    },
+    difficulty: difficultyMap[sceneDef.type],
+    mathConcepts: [MathConcept.CALCULUS], // Default, can be expanded
+    tags: [
+      sceneDef.category.toLowerCase(),
+      sceneDef.type.toLowerCase().replace(" ", "-"),
+    ],
+    sceneDefinition: sceneDef, // Store the original definition
+  };
+}
 
 /**
  * Enhanced scene registry with mathematical visualizations
  */
 export const sceneRegistry: SceneConfiguration[] = [
+  // Convert scene library definitions to configurations
+  ...sceneLibrary.map(createSceneConfigFromDefinition),
   {
     id: "vector-field",
     name: "Vector Field",

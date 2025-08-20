@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FiSliders } from 'react-icons/fi';
-import { Container } from '../ui/Container';
-import { Badge } from '../ui/Badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/Tabs';
-import InteractiveGraph from '../ui/InteractiveGraph';
-import { Button } from '../ui/Button';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FiSliders } from "react-icons/fi";
+import { Container } from "../ui/Container";
+import { Badge } from "../ui/Badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/Tabs";
+import InteractiveGraph from "../ui/InteractiveGraph";
+import { Button } from "../ui/Button";
 
 const DemoSection: React.FC = () => {
   const [amplitude, setAmplitude] = useState(1);
@@ -22,12 +22,15 @@ const DemoSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Badge variant="teal" className="mb-4">Interactive Demo</Badge>
+          <Badge variant="teal" className="mb-4">
+            Interactive Demo
+          </Badge>
           <h2 className="text-3xl font-bold tracking-tight text-primary-dark sm:text-4xl mb-4">
             Try it yourself
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-neutral">
-            Experience the power of Corollary with these interactive demos. Adjust parameters and see the results in real-time.
+            Experience the power of Corollary with these interactive demos.
+            Adjust parameters and see the results in real-time.
           </p>
         </motion.div>
 
@@ -37,7 +40,7 @@ const DemoSection: React.FC = () => {
             <TabsTrigger value="3d-surface">3D Surface</TabsTrigger>
             <TabsTrigger value="vector-field">Vector Field</TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="sine-wave" className="mt-8">
             <InteractiveGraph
               title="Sine Wave Visualization"
@@ -47,7 +50,9 @@ const DemoSection: React.FC = () => {
               controls={
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                   <div>
-                    <label className="block text-sm font-medium text-neutral mb-1">Amplitude: {amplitude}</label>
+                    <label className="block text-sm font-medium text-neutral mb-1">
+                      Amplitude: {amplitude}
+                    </label>
                     <input
                       type="range"
                       min="0.1"
@@ -59,7 +64,9 @@ const DemoSection: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-neutral mb-1">Frequency: {frequency}</label>
+                    <label className="block text-sm font-medium text-neutral mb-1">
+                      Frequency: {frequency}
+                    </label>
                     <input
                       type="range"
                       min="0.5"
@@ -71,7 +78,9 @@ const DemoSection: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-neutral mb-1">Phase: {phase}</label>
+                    <label className="block text-sm font-medium text-neutral mb-1">
+                      Phase: {phase}
+                    </label>
                     <input
                       type="range"
                       min="0"
@@ -86,7 +95,7 @@ const DemoSection: React.FC = () => {
               }
             />
           </TabsContent>
-          
+
           <TabsContent value="3d-surface" className="mt-8">
             <InteractiveGraph
               title="3D Surface Plot"
@@ -95,7 +104,11 @@ const DemoSection: React.FC = () => {
               codeSnippet={`import numpy as np\nfrom mpl_toolkits.mplot3d import Axes3D\nimport matplotlib.pyplot as plt\n\n# Create data\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = np.sin(np.sqrt(X**2 + Y**2))\n\n# Create plot\nfig = plt.figure(figsize=(10, 8))\nax = fig.add_subplot(111, projection='3d')\nsurf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\nax.set_title('3D Surface Plot: z = sin(√(x² + y²))')\nfig.colorbar(surf, ax=ax, shrink=0.5, aspect=5)\nplt.show()`}
               controls={
                 <div className="flex items-center justify-center">
-                  <Button variant="outline" size="sm" className="flex items-center">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center"
+                  >
                     <FiSliders className="mr-2 h-4 w-4" />
                     <span>Adjust Parameters</span>
                   </Button>
@@ -103,7 +116,7 @@ const DemoSection: React.FC = () => {
               }
             />
           </TabsContent>
-          
+
           <TabsContent value="vector-field" className="mt-8">
             <InteractiveGraph
               title="Vector Field Visualization"
@@ -112,7 +125,11 @@ const DemoSection: React.FC = () => {
               codeSnippet={`import numpy as np\nimport matplotlib.pyplot as plt\n\n# Create grid\nx = np.linspace(-2, 2, 20)\ny = np.linspace(-2, 2, 20)\nX, Y = np.meshgrid(x, y)\n\n# Define vector field components\nu = Y  # x-component\nv = -X  # y-component\n\n# Create plot\nplt.figure(figsize=(10, 8))\nplt.quiver(X, Y, u, v, scale=25)\nplt.title('Vector Field: F(x,y) = (y, -x)')\nplt.xlabel('x')\nplt.ylabel('y')\nplt.grid(True)\nplt.axis('equal')\nplt.show()`}
               controls={
                 <div className="flex items-center justify-center">
-                  <Button variant="outline" size="sm" className="flex items-center">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center"
+                  >
                     <FiSliders className="mr-2 h-4 w-4" />
                     <span>Adjust Parameters</span>
                   </Button>
@@ -130,9 +147,10 @@ const DemoSection: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="mb-6 text-neutral">
-            These are just a few examples of what you can create with Corollary. Sign up to access the full library of interactive visualizations.
+            These are just a few examples of what you can create with Corollary.
+            Sign up to access the full library of interactive visualizations.
           </p>
-          <Button size="lg">
+          <Button size="lg" component="a" href="/signup">
             Get Started for Free
           </Button>
         </motion.div>

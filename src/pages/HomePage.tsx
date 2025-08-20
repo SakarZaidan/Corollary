@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
 import HeroSection from "../components/sections/HeroSection";
 import FeatureSection from "../components/sections/FeatureSection";
 import ScrollytellingSection from "../components/sections/ScrollytellingSection";
@@ -17,14 +17,14 @@ import {
 } from "../utils/useScrollAnimation";
 import { BrandedIcons } from "../components/ui/BrandedIcons";
 
-const HomePage = () => {
+export function HomePage() {
   return (
-    <div className="relative overflow-hidden bg-white">
+    <div className="relative overflow-hidden bg-primary-dark text-white">
       {/* Background decorative elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-[10%] -right-[10%] h-[500px] w-[500px] rounded-full bg-accent-purple/5 blur-3xl" />
-        <div className="absolute top-[60%] -left-[5%] h-[300px] w-[300px] rounded-full bg-accent-teal/5 blur-3xl" />
-        <div className="absolute top-[30%] right-[5%] h-[400px] w-[400px] rounded-full bg-accent-purple/5 blur-3xl" />
+        <div className="absolute -top-[10%] -right-[10%] h-[500px] w-[500px] rounded-full bg-accent-purple/20 blur-3xl" />
+        <div className="absolute top-[60%] -left-[5%] h-[300px] w-[300px] rounded-full bg-accent-teal/20 blur-3xl" />
+        <div className="absolute top-[30%] right-[5%] h-[400px] w-[400px] rounded-full bg-accent-purple/15 blur-3xl" />
       </div>
 
       <div className="relative z-10 flex min-h-screen flex-col">
@@ -124,5 +124,3 @@ const HomePage = () => {
     </div>
   );
 };
-
-export default HomePage;

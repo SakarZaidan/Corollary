@@ -6,7 +6,7 @@ import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
 
 // Dynamically import the HeroCanvas component
-const HeroCanvas = lazy(() => import("../three/HeroCanvas"));
+const HeroCanvas = lazy(() => import("../three/HeroCanvas").then(module => ({ default: module.HeroCanvas })));
 
 const HeroSection: React.FC = () => {
   return (
@@ -69,14 +69,20 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-8 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
             >
-              <Link to="/workspace">
+              <Link to="/signup">
                 <Button size="lg" className="w-full sm:w-auto">
                   Get Started for Free
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                Request a Demo
-              </Button>
+              <Link to="/login">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                >
+                  Sign In
+                </Button>
+              </Link>
             </motion.div>
           </div>
 

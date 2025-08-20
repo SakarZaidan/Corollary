@@ -3,7 +3,7 @@ import React from "react";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
-const SimpleScene: React.FC<{ rotationSpeed: number }> = ({
+export const SimpleScene: React.FC<{ rotationSpeed: number }> = ({
   rotationSpeed,
 }) => {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -26,5 +26,3 @@ const SimpleScene: React.FC<{ rotationSpeed: number }> = ({
     </>
   );
 };
-
-export default SimpleScene;

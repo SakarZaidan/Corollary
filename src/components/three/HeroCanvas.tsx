@@ -458,4 +458,4 @@ const HeroCanvas: React.FC = () => {
   );
 };
 
-export default HeroCanvas;
+export { HeroCanvas };

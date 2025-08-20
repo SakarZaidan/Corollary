@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/DropdownMenu";
 
-const Header: React.FC = () => {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -96,12 +96,12 @@ const Header: React.FC = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="#"
+              href="/login"
               className="text-sm font-medium text-primary-dark hover:text-accent-purple"
             >
               Sign In
             </a>
-            <Button variant="default" size="sm">
+            <Button variant="default" size="sm" component="a" href="/signup">
               Get Started
             </Button>
           </div>
@@ -176,13 +176,18 @@ const Header: React.FC = () => {
                 </a>
                 <div className="pt-4 border-t border-neutral-light/10">
                   <a
-                    href="#"
+                    href="/login"
                     className="block px-3 py-2 text-sm font-medium text-primary-dark hover:bg-secondary-light rounded-md"
                   >
                     Sign In
                   </a>
                   <div className="mt-2 px-3">
-                    <Button variant="default" className="w-full">
+                    <Button
+                      variant="default"
+                      className="w-full"
+                      component="a"
+                      href="/signup"
+                    >
                       Get Started
                     </Button>
                   </div>
@@ -195,5 +200,3 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
-export default Header;

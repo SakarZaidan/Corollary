@@ -8,7 +8,7 @@ interface VectorFieldProps {
   scale?: number;
 }
 
-const VectorField: React.FC<VectorFieldProps> = ({
+export const VectorField: React.FC<VectorFieldProps> = ({
   rotationSpeed = 1,
   density = 20,
   scale = 0.5
@@ -56,5 +56,3 @@ const VectorField: React.FC<VectorFieldProps> = ({
     </group>
   );
 };
-
-export default VectorField;
